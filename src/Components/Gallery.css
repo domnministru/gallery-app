@@ -1,0 +1,5 @@
+.gallery-container {
+    position: relative;
+    column-count: 3;
+    column-gap: 0;
+}
