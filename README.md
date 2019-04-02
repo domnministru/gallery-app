@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Auth
+
+1) Create an token.js file and insert next line there <br>
+export const APP_ID = 'insert your token here';
+
 ## Available Scripts
 
 In the project directory, you can run:
