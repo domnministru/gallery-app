@@ -15,23 +15,21 @@ export default class Search extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="container search-container">
-                    <div className="search-area">
-                        <h1> Get Image App </h1>
-                        <p>Beautiful, free photos.<br/>
-                            Gifted by the world’s most generous community of photographers.</p>
-                        <div className="search">
-                            <form onSubmit={this.handleSubmit.bind(this)}>
-                                <div className="input-group mb-3">
-                                    <div className="input-group-prepend">
-                                        <button className="btn btn-outline-secondary" type="button"
-                                                onClick={this.handleSubmit.bind(this)}/>
-                                    </div>
-                                    <input type="text" className="form-control" onChange={this.handleInputChange} />
+            <div className="container search-container">
+                <div className="search-area">
+                    <h1> Get Image App </h1>
+                    <p>Beautiful, free photos.<br/>
+                        Gifted by the world’s most generous community of photographers.</p>
+                    <div className="search">
+                        <form onSubmit={this.handleSubmit.bind(this)}>
+                            <div className="input-group mb-3">
+                                <div className="input-group-prepend">
+                                    <button className="btn btn-outline-secondary" type="button"
+                                            onClick={this.handleSubmit.bind(this)}/>
                                 </div>
-                            </form>
-                        </div>
+                                <input type="text" className="form-control" onChange={this.handleInputChange} />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

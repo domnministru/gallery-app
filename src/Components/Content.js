@@ -3,7 +3,7 @@ import Search from "./Search";
 import Gallery from "./Gallery";
 import axios from "axios";
 import {APP_ID} from "../token";
-import "./Search.css";
+import "./Content.css";
 
 export default class Content extends React.Component {
     state = {
@@ -16,7 +16,12 @@ export default class Content extends React.Component {
     };
 
     performSearch = () => {
+        function showFooter() { //default display value for footer is none
+            document.getElementById('footer').style.display = "flex"
+        }
+
         const { query } = this.state;
+
         if (query === null || query === "") {
             alert("Please insert a value");
         } else {
@@ -25,7 +30,8 @@ export default class Content extends React.Component {
                     this.setState({
                         images: result.data.results
                     })
-                })
+                });
+            showFooter(); // show footer if we have content
         }
     };
 

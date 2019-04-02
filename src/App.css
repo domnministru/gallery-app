@@ -2,8 +2,11 @@ body {
     background: url(./images/bg-image.jpg) no-repeat center center fixed;
     background-size: cover;
     color: white;
+
+    display: table;
+    position: absolute;
     height: 100%;
-    margin: 0;
+    width: 100%;
 }
 
 a {
@@ -33,4 +36,9 @@ img {
 
 .container-fluid {
     padding: 0 0 0 0;
+}
+
+#root {
+    display: table-cell;
+    vertical-align: middle;
 }
