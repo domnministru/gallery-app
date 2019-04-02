@@ -3,7 +3,7 @@ import Search from "./Search";
 import Gallery from "./Gallery";
 import axios from "axios";
 import {APP_ID} from "../token";
-import "./Search.css";
+import "./Content.css";
 
 export default class Content extends React.Component {
     state = {

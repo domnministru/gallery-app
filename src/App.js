@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import './App.css'
-import Header from "./Components/Header";
 import Content from "./Components/Content";
 import Footer from "./Components/Footer";
 
@@ -14,13 +13,7 @@ export default class App extends Component {
     render() {
         return (
             <div className="container-fluid">
-          
-                <div className="container">
-                    <Header/>
-                </div>
-
                 <Content />
-          
                 <Footer />
             </div>
         );
