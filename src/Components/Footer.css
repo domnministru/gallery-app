@@ -17,3 +17,7 @@ footer {
     justify-content: flex-end;
     align-items: center;
 }
+
+#footer {
+    display: none;
+}

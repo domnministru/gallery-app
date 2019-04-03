@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer" id="footer">
             <div className="container footer-container">
                 <span className="text-muted"> Place sticky footer content here. </span>
             </div>
