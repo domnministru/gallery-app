@@ -8,7 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowCircleDown } from '@fortawesome/free-solid-svg-icons'
 library.add(faArrowCircleDown);
 
-export default class App extends Component {
+export default class App extends  Component{
     render() {
         return (
             <div className="container-fluid">

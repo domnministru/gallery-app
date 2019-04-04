@@ -56,7 +56,7 @@ export default class Content extends React.Component {
                 />
 
                 { this.state.load_state === LOADING_STATE.loaded
-                    ? <Gallery data = {this.state.images} />
+                    ? <Gallery data={this.state.images} />
                     : <div className="empty"> </div>
                 }
 

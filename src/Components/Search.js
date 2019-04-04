@@ -2,16 +2,19 @@ import React from 'react';
 import "../Components/Search.css";
 import "./Search.css";
 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSearch} from "@fortawesome/free-solid-svg-icons";
+
 export default class Search extends React.Component {
 
     handleInputChange = event => {
         this.props.handleInputChange(event.target.value);
     };
 
-    handleSubmit(event) {
+    handleSubmit = event => {
         event.preventDefault();
         this.props.performSearch();
-    }
+    };
 
     render() {
         return (
@@ -21,13 +24,15 @@ export default class Search extends React.Component {
                     <p>Beautiful, free photos.<br/>
                         Gifted by the world’s most generous community of photographers.</p>
                     <div className="search">
-                        <form onSubmit={this.handleSubmit.bind(this)}>
+                        <form onSubmit={this.handleSubmit}>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
                                     <button className="btn btn-outline-secondary" type="button"
-                                            onClick={this.handleSubmit.bind(this)}/>
+                                            onClick={this.handleSubmit}>
+                                        <FontAwesomeIcon icon={faSearch}/>
+                                    </button>
                                 </div>
-                                <input type="text" className="form-control" onChange={this.handleInputChange} />
+                                <input type="text" className="form-control" onChange={this.handleInputChange}/>
                             </div>
                         </form>
                     </div>
