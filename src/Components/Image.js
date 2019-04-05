@@ -2,10 +2,10 @@ import React from 'react';
 import ImageContent from "./ImageContent";
 import "./Image.css";
 
-const Image = ({ ...props }) => {
+const Image = () => {
     return(
         <div className="image">
-            <ImageContent { ...props } />
+            <ImageContent />
         </div>
         )
 };

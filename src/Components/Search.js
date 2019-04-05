@@ -1,20 +1,14 @@
 import React from 'react';
+import { connect } from "react-redux";
+
 import "../Components/Search.css";
 import "./Search.css";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
 
-export default class Search extends React.Component {
+class Search extends React.Component {
 
-    handleInputChange = event => {
-        this.props.handleInputChange(event.target.value);
-    };
-
-    handleSubmit = event => {
-        event.preventDefault();
-        this.props.performSearch();
-    };
 
     render() {
         return (
@@ -27,12 +21,11 @@ export default class Search extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <button className="btn btn-outline-secondary" type="button"
-                                            onClick={this.handleSubmit}>
+                                    <button className="btn btn-outline-secondary" type="button" onClick={ this.handleClick }>
                                         <FontAwesomeIcon icon={faSearch}/>
                                     </button>
                                 </div>
-                                <input type="text" className="form-control" onChange={this.handleInputChange}/>
+                                <input type="text" className="form-control" onChange={ this.handleInputChange } />
                             </div>
                         </form>
                     </div>
@@ -41,3 +34,5 @@ export default class Search extends React.Component {
         );
     }
 }
+
+export default connect()(Search)
