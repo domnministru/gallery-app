@@ -2,3 +2,7 @@
     padding: 5px 5px 0 5px;
     position: relative;
 }
+
+.image:first-child {
+    padding: 2.5px 5px 0 5px;
+}

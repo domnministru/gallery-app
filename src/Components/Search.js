@@ -1,14 +1,27 @@
 import React from 'react';
-import { connect } from "react-redux";
+import {connect} from "react-redux";
 
 import "../Components/Search.css";
 import "./Search.css";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {fetchImages} from "../actions/action";
 
 class Search extends React.Component {
 
+    state = {
+        query: null,
+    };
+
+    handleInputChange = (e) => {
+        this.setState({ query: e.target.value })
+    };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.fetchImages(this.state.query);
+    };
 
     render() {
         return (
@@ -21,11 +34,12 @@ class Search extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="input-group mb-3">
                                 <div className="input-group-prepend">
-                                    <button className="btn btn-outline-secondary" type="button" onClick={ this.handleClick }>
+                                    <button className="btn btn-outline-secondary" type="button"
+                                            onClick={this.handleSubmit}>
                                         <FontAwesomeIcon icon={faSearch}/>
                                     </button>
                                 </div>
-                                <input type="text" className="form-control" onChange={ this.handleInputChange } />
+                                <input type="text" className="form-control" onChange={this.handleInputChange}/>
                             </div>
                         </form>
                     </div>
@@ -35,4 +49,8 @@ class Search extends React.Component {
     }
 }
 
-export default connect()(Search)
+const mapDispatchToProps = {
+    fetchImages,
+};
+
+export default connect(null, mapDispatchToProps)(Search)
