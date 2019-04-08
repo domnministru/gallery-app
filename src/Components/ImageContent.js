@@ -57,6 +57,7 @@ class ImageContent extends React.Component {
     }
 }
 
+
 const mapStateToProps = state => ({
     data: state.data,
     loading: state.loading,
