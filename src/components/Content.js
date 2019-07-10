@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Search from "./Search";
 import Gallery from "./Gallery";
 
